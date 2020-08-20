@@ -1,0 +1,163 @@
+.pricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem ;
+    &-title{
+        font-family: "Raleway",sans-serif;
+            font-weight: 400;
+            font-size: 3.4rem;
+            padding: 2rem;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:black;
+        padding:0 2rem;
+        padding-top: 1rem;
+        margin: 2rem 2rem;
+        border: 1px solid $main-red-color;
+        border-radius: 1.5rem;
+        width: 90%;
+        & .pricing__container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: calc(100% - 2.5rem);
+        }
+        & .pricing-list{
+            list-style: none;
+            padding-left: 3rem;
+           & .lista{
+                padding: 1rem;
+                font-size: 1.4rem;
+                position: relative;
+                white-space: nowrap;
+                &::before{
+                    content:"";
+                    position: absolute;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background: url('/img/Chechmark-1.svg')no-repeat center/cover;
+                    left:-1rem;
+                    top: 1.25rem;
+                }
+            }
+        }  
+        & .pricing-button{
+            width: 15rem;
+            height: 5rem;
+            border-radius: 4rem;
+            transform: translate(0,50%);
+            border: none;
+            color: white;
+            background-color: $main-red-color;
+            font-size: 1.3rem;
+            font-weight: 600;
+        } 
+    }
+}
+
+.pricing-container{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .pricing-name{
+        padding-top: 2rem;
+        font-size: 2rem;
+        font-family: $fontRaleway;
+        font-weight: 700;
+    }
+    & .pricing-tag{
+        font-size: 4.6rem;
+        font-weight: 300;
+    }
+    & .pricing-limited_ofert{
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+}
+
+.Basic{
+    border: 1px solid $main-red-color;
+    &:hover{
+        box-shadow: 0 0 2rem lighten( $main-red-color, 30% );
+        transform: scale(1.05);
+        & .pricing-button{
+            box-shadow: 5px 10px 27px lighten( $main-red-color, 30% );
+        }
+    }
+   .pricing-tag{
+       color: $main-red-color;
+   }
+   .pricing-button{
+       background-color:$main-red-color ;
+   }
+   .lista{
+        &:nth-child(n+4) {
+            &::before{
+                content:"";
+                position: absolute;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: url('/img/Close.svg')no-repeat center/cover;
+                left:-1rem;
+                top: 1.25rem;
+            }
+        }
+    }
+}
+
+.Profesional{
+    border: 1px solid $main-blue-color;
+
+    &:hover{
+        box-shadow: 0 0 2rem lighten( $main-blue-color, 35% );
+        transform: scale(1.05);
+        & .pricing-button{
+            box-shadow: 5px 10px 27px lighten( $main-blue-color, 35% );
+        }
+    }
+   .pricing-tag{
+       color: $main-blue-color;
+   }
+   .lista{
+        &:last-child {
+            &::before{
+                content:"";
+                position: absolute;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: url('/img/Close.svg')no-repeat center/cover;
+                left:-1rem;
+                top: 1.25rem;
+            }
+        }
+    }
+   .pricing-button{
+       background-color:$main-blue-color ;
+   }
+
+}
+.Premium{
+    border: 1px solid $main-green-color;
+    &:hover{
+        box-shadow: 0 0 2rem lighten( $main-green-color, 30% );
+        transform: scale(1.05);
+        & .pricing-button{
+            box-shadow: 5px 10px 27px lighten( $main-green-color, 30% );
+        }
+    }
+   .pricing-tag{
+       color: $main-green-color;
+   }
+   .pricing-button{
+       background-color:$main-green-color ;
+   }
+
+}

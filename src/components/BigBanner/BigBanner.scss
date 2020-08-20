@@ -1,0 +1,36 @@
+ .banner{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    height:calc(100vh - 70px);
+    background: url('/img/Background.png') no-repeat bottom/contain ;
+        &--sellmore{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        }
+        &--title{
+            font-size: 4.9rem;
+            font-family: $fontRaleway;
+            font-weight: 400;
+            white-space:nowrap;
+        }
+        &--text{
+            padding-top: 20px;
+            padding-bottom: 40px;
+            font-family: $fontOpen;
+            font-weight: 600;
+        }
+        &--btn{
+            background: $main-blue-color 0% 0% no-repeat padding-box;
+            box-shadow: 5px 10px 14px #07ACE629;
+            border-radius: 4rem;
+            border: none;
+            padding: 2rem 8rem;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            flex-wrap: nowrap;
+            white-space:nowrap;
+        }
+    }
