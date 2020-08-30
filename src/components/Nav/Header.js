@@ -8,6 +8,9 @@ const Header = () => (
       <HeaderLogo name="BestShop"/>
       <Burger/>
     </nav>
+  
   </header>
 );
 export default Header;
+
+//dodac header list pod nav

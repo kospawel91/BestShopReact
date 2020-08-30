@@ -41,7 +41,7 @@ const FormCheckout=({label,isSelected,onCheckboxChange})=>{
     )
 }
 
-const OPTIONS = ["One"];
+const OPTIONS = ["Terms"];
 
 class FormForm extends Component{
     state = {

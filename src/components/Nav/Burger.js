@@ -40,7 +40,7 @@ const Burger = () => {
           <div />
           <div />
         </StyledBurger>
-        <HeaderList open={open} onClick={() => setOpen(!open)} />
+        <HeaderList open={open}/>
       </>
     );
 };
