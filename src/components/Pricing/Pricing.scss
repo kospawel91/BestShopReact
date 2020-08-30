@@ -36,15 +36,7 @@
                 font-size: 1.4rem;
                 position: relative;
                 white-space: nowrap;
-                &::before{
-                    content:"";
-                    position: absolute;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    background: url('/img/Chechmark-1.svg')no-repeat center/cover;
-                    left:-1rem;
-                    top: 1.25rem;
-                }
+                
             }
         }  
         & .pricing-button{
@@ -98,19 +90,7 @@
    .pricing-button{
        background-color:$main-red-color ;
    }
-   .lista{
-        &:nth-child(n+4) {
-            &::before{
-                content:"";
-                position: absolute;
-                width: 1.5rem;
-                height: 1.5rem;
-                background: url('/img/Close.svg')no-repeat center/cover;
-                left:-1rem;
-                top: 1.25rem;
-            }
-        }
-    }
+   
 }
 
 .Profesional{
@@ -160,4 +140,27 @@
        background-color:$main-green-color ;
    }
 
+}
+
+.checkmark-isAv{
+    &::before{
+                content:"";
+                position: absolute;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: url('/img/Close.svg')no-repeat center/cover;
+                left:-1rem;
+                top: 1.25rem;
+            }
+}
+.checkmark-isNotAv{
+    &::before{
+                    content:"";
+                    position: absolute;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background: url('/img/Chechmark-1.svg')no-repeat center/cover;
+                    left:-1rem;
+                    top: 1.25rem;
+                }
 }

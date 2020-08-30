@@ -1,84 +1,51 @@
-import React from 'react';
-import priceList from './priceOfertList'
+import React from "react";
+import priceList from "./priceOfertList";
 
-
-
-
-
-const PlanPrice =({price})=>{
-    return(
-        <div className="pricing-tag">{price}</div>
-    )
-}
-const PlanTitle = ({title}) => {
-    return (
-        <div className="pricing-name">
-            {title}
-        </div>
-    );
+const PlanList = ({ list }) => {
+  console.log(list.map((el) => el.item));
+  return (
+    <ul className="pricing-list">
+      {list.map((el, index) => {
+        return (
+          <li
+            key={index}
+            className={`lista ${
+              el.isAvailable ? "checkmark-isNotAv" : "checkmark-isAv"
+            }`}
+          >
+            {el.item}
+          </li>
+        );
+      })}
+    </ul>
+  );
 };
 
-const PlanLO = ({ofert}) =>{
+const priceListTemplate = priceList.map(
+  ({ title, price, limitedOfert, list }) => {
     return (
-        <div className="pricing-limited_ofert">{ofert}</div>
-    )
-}
-
-const PlanList =({list}) =>{
-    
-    return (
-        <ul className="pricing-list">
-            <PriceItem list={list}/>
-        </ul>
-    )
-}
-const PriceItem = ({list=[]}) =>{
-    return(
-        <>
-            {list.map((el =>
-                <li key={el} className ="lista"  >{el}</li>))}
-        </>
-    )
-}
-
-
-const PriceButton =()=>{
-    return(
-        <button className="pricing-button">Begin</button>
-    )
-}
-
-
-const nowy =  priceList.map(({ title, price, limitedOfert,list})=>{
-    return (
-        <div className={`${title} pricing__body`}>
-            <div className='pricing__container'>
-                <div className= "pricing-container">
-            <PlanTitle title={title}/>
-            <PlanPrice price={price}/>
-            <PlanLO ofert={limitedOfert}/>
+      <div className={`${title} pricing__body`} key={title}>
+        <div className="pricing__container">
+          <div className="pricing-container">
+            <div className="pricing-name">{title}</div>;
+            <div className="pricing-tag">{price}</div>
+            <div className="pricing-limited_ofert">{limitedOfert}</div>;
+          </div>
+          <PlanList list={list} />
         </div>
-        <PlanList list={list}/>
-        </div>
-        <PriceButton/>
-    </div>)
-}) 
-
-
-
+        <button className="pricing-button">Begin</button>;
+      </div>
+    );
+  }
+);
 
 const PriceOfert = () => {
-    return (
-        <>
-        <h1 className="pricing-title">Pricing</h1>
-        {nowy}
-        </>
-    );
+  return (
+    <>
+      <h1 className="pricing-title">Pricing</h1>
+      {priceListTemplate}
+    </>
+  );
 };
-
-
-
-
-
 
 export default PriceOfert;
